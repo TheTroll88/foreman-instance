@@ -48,3 +48,19 @@ python scripts/build_proof_of_work.py
 ```
 
 This emits a manifest in `proof/proof_of_work.json` with per-artifact SHA256 hashes and a single proof hash.
+
+## Social Proof Links
+
+```powershell
+python scripts/publish_social_proof.py
+```
+
+When X handle exists:
+
+```powershell
+$env:FOREMAN_TWITTER_HANDLE="your_handle"
+python scripts/publish_social_proof.py
+```
+
+Output:
+- `social/links.json` (GitHub + Twitter proof links)
