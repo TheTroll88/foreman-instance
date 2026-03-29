@@ -1,0 +1,11 @@
+{
+  "recorded_utc": "2026-03-29T21:55:22.839248+00:00",
+  "flow": "x_signup",
+  "milestones": {
+    "create_account_form_reached": true,
+    "profile_fields_submitted": true,
+    "anti_bot_verification_gate_reached": true,
+    "account_created": false
+  },
+  "blocking_reason": "Platform anti-bot verification challenge requires human completion"
+}
