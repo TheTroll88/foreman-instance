@@ -64,3 +64,14 @@ python scripts/publish_social_proof.py
 
 Output:
 - `social/links.json` (GitHub + Twitter proof links)
+
+## X Signup Checkpoint
+
+```powershell
+python scripts/prepare_signup_packet.py
+```
+
+Output:
+- `social/signup_packet.json`
+
+This packet records that signup form access was achieved and marks the exact manual checkpoint where platform verification is required.
