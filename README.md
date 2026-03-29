@@ -1,0 +1,39 @@
+# Foreman Instance
+
+Standalone operational instance for Foreman with:
+- Local credential vault generation
+- Per-service login/password identity bundle
+- Free API provider bootstrap and health checks
+- Auditable reports
+
+## Quick Start
+
+```powershell
+cd C:\Users\natha\OneDrive\GitHub\Foreman-Instance
+python scripts/generate_instance_identity.py
+python scripts/bootstrap_free_apis.py
+```
+
+## Output
+- runtime/instance_identity.json (non-secret metadata)
+- runtime/instance_secrets.json (local secret bundle)
+- reports/free_api_status.json (live API checks)
+
+## Notes
+- This repo generates credentials locally.
+- Move secrets to KeePassXC after generation.
+- Never commit runtime/* secrets.
+
+## Export Secrets to KeePassXC
+
+```powershell
+$env:KEEPASS_DB_PATH="C:\path\to\vault.kdbx"
+$env:KEEPASS_MASTER_PASSWORD="your-master-password"
+$env:KEEPASS_GROUP="Foreman Instance"
+$env:DELETE_SECRETS_AFTER_EXPORT="true"
+python scripts/export_secrets_to_keepass.py
+```
+
+## BaseScan API Key
+- Public endpoint checks run without a key.
+- Full key-based checks require `BASESCAN_API_KEY` env var.

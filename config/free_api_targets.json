@@ -1,0 +1,41 @@
+{
+  "targets": [
+    {
+      "name": "basescan_public",
+      "method": "GET",
+      "url": "https://api.basescan.org/api?module=gastracker&action=gasoracle",
+      "requires_key": false
+    },
+    {
+      "name": "basescan_with_key",
+      "method": "GET",
+      "url": "https://api.basescan.org/api?module=gastracker&action=gasoracle&apikey=${BASESCAN_API_KEY}",
+      "requires_key": true,
+      "env_key": "BASESCAN_API_KEY"
+    },
+    {
+      "name": "coingecko_ping",
+      "method": "GET",
+      "url": "https://api.coingecko.com/api/v3/ping",
+      "requires_key": false
+    },
+    {
+      "name": "dexscreener_status",
+      "method": "GET",
+      "url": "https://api.dexscreener.com/latest/dex/search?q=ETH",
+      "requires_key": false
+    },
+    {
+      "name": "base_rpc_block",
+      "method": "POST",
+      "url": "https://base-rpc.publicnode.com",
+      "json": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "eth_blockNumber",
+        "params": []
+      },
+      "requires_key": false
+    }
+  ]
+}

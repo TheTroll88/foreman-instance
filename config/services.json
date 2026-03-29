@@ -1,0 +1,11 @@
+{
+  "services": [
+    { "name": "github", "username_prefix": "foremanlabs", "password_length": 24 },
+    { "name": "gmail", "username_prefix": "foreman.instance", "password_length": 24 },
+    { "name": "x_twitter", "username_prefix": "foreman.signal", "password_length": 24 },
+    { "name": "basescan", "username_prefix": "foreman.base", "password_length": 24 },
+    { "name": "coinmarketcap", "username_prefix": "foreman.cmc", "password_length": 24 },
+    { "name": "coingecko", "username_prefix": "foreman.cg", "password_length": 24 },
+    { "name": "dexscreener", "username_prefix": "foreman.dex", "password_length": 24 }
+  ]
+}
