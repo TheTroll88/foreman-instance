@@ -37,3 +37,14 @@ python scripts/export_secrets_to_keepass.py
 ## BaseScan API Key
 - Public endpoint checks run without a key.
 - Full key-based checks require `BASESCAN_API_KEY` env var.
+
+## Proof of Work Bundle
+
+```powershell
+python scripts/generate_instance_identity.py
+python scripts/bootstrap_free_apis.py
+python scripts/generate_foreman_wallets.py
+python scripts/build_proof_of_work.py
+```
+
+This emits a manifest in `proof/proof_of_work.json` with per-artifact SHA256 hashes and a single proof hash.
